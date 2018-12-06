@@ -262,7 +262,7 @@ func (u *UUID) UnmarshalText(text []byte) (err error) {
 
 		if i == 2 {
 			if !bytes.Contains([]byte("012345"), []byte{t[0]}) {
-				err = fmt.Errorf("uuid: invalid version number: %s", t[0])
+				err = fmt.Errorf("uuid: invalid version number: %b", t[0])
 				return
 			}
 		}
